@@ -69,13 +69,16 @@ export default function PostDetail() {
   };
 
   const handleCommentClick = async (e) => {
-    await fetch(`http://localhost:4000/comments/${e.target.value}`, {
-      method: 'DELETE',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-    });
+    await fetch(
+      `https://young-mesa-82569.herokuapp.com/comments/${e.target.value}`,
+      {
+        method: 'DELETE',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      }
+    );
     window.location.reload();
   };
 
