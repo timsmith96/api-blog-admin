@@ -76,12 +76,10 @@ export default function PostDetail() {
         'Content-Type': 'application/json',
       },
     });
-    navigate(`/posts/${id}`);
+    window.location.reload();
   };
 
   const { user, comments, createdAt } = post;
-
-  console.log(display);
 
   if (loading) {
     return <h2>loading</h2>;
