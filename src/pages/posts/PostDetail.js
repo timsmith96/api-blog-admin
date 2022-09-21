@@ -14,7 +14,9 @@ export default function PostDetail() {
   }, []);
 
   async function requestPost() {
-    const res = await fetch(`http://localhost:4000/posts/${id}`);
+    const res = await fetch(
+      `https://young-mesa-82569.herokuapp.com/posts/${id}`
+    );
     const json = await res.json();
     setPost(json);
     setpostText(json.text);
@@ -24,7 +26,7 @@ export default function PostDetail() {
   }
 
   const handleDelete = async () => {
-    await fetch(`http://localhost:4000/posts/${id}`, {
+    await fetch(`https://young-mesa-82569.herokuapp.com/posts/${id}`, {
       method: 'DELETE',
       mode: 'cors',
       headers: {
@@ -53,7 +55,7 @@ export default function PostDetail() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch(`http://localhost:4000/posts/${id}`, {
+    await fetch(`https://young-mesa-82569.herokuapp.com/posts/${id}`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
