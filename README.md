@@ -9,6 +9,7 @@ An admin site built for my example blog site app (https://github.com/timsmith96/
 - Displays all blog posts on the home page
 - Users can click on a post blog to display the post
 - Users can make changes to blog posts and comments
+- Users can choose to display/hide posts
 - Users can view blog posts using the blog page (https://github.com/timsmith96/api-blog-client)
 
 ## Demo
