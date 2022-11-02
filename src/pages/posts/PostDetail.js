@@ -14,9 +14,7 @@ export default function PostDetail() {
   }, []);
 
   async function requestPost() {
-    const res = await fetch(
-      `https://young-mesa-82569.herokuapp.com/posts/${id}`
-    );
+    const res = await fetch(`https://api-blog-api.herokuapp.com/posts/${id}`);
     const json = await res.json();
     setPost(json);
     setpostText(json.text);
@@ -26,7 +24,7 @@ export default function PostDetail() {
   }
 
   const handleDelete = async () => {
-    await fetch(`https://young-mesa-82569.herokuapp.com/posts/${id}`, {
+    await fetch(`https://api-blog-api.herokuapp.com/posts/${id}`, {
       method: 'DELETE',
       mode: 'cors',
       headers: {
