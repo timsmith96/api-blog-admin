@@ -8,7 +8,7 @@ export default function Posts() {
   }, []);
 
   async function requestPosts() {
-    const res = await fetch('https://young-mesa-82569.herokuapp.com/posts');
+    const res = await fetch('https://api-blog-api.herokuapp.com/posts');
     const json = await res.json();
     setPosts(json);
   }

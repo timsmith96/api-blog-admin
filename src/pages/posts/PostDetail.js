@@ -55,7 +55,7 @@ export default function PostDetail() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch(`https://young-mesa-82569.herokuapp.com/posts/${id}`, {
+    await fetch(`https://api-blog-api.herokuapp.com/posts/${id}`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -72,7 +72,7 @@ export default function PostDetail() {
 
   const handleCommentClick = async (e) => {
     await fetch(
-      `https://young-mesa-82569.herokuapp.com/comments/${e.target.value}`,
+      `https://api-blog-api.herokuapp.com/comments/${e.target.value}`,
       {
         method: 'DELETE',
         headers: {
